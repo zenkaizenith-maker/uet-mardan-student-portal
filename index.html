@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UET Mardan | Student Activities Portal</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* UET theme colors */
+    :root {
+      --uet-green: #0a5c36;
+      --uet-gold: #f2b705;
+    }
+    /* Navbar + footer use deep UET green */
+    .navbar-uet, .footer-uet {
+      background-color: var(--uet-green);
+    }
+    .navbar-uet .navbar-brand,
+    .navbar-uet .nav-link {
+      color: #ffffff;
+    }
+    .navbar-uet .nav-link:hover {
+      color: var(--uet-gold);
+    }
+    /* Gold accent button */
+    .btn-gold {
+      background-color: var(--uet-gold);
+      color: #000;
+      font-weight: 600;
+    }
+    .btn-gold:hover {
+      background-color: #d9a404;
+      color: #000;
+    }
+    /* Hero section */
+    .hero {
+      background: linear-gradient(135deg, #0a5c36 0%, #0e7a48 100%);
+      color: #fff;
+    }
+    .hero img {
+      border: 4px solid var(--uet-gold);
+    }
+    /* Section headings with gold underline */
+    .section-title {
+      color: var(--uet-green);
+      border-bottom: 3px solid var(--uet-gold);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    /* Cards get a subtle shadow */
+    .card {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      border: none;
+    }
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+    /* Code block styling */
+    pre.code-block {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 20px;
+      border-radius: 8px;
+      max-height: 600px;
+      overflow: auto;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Navbar (sticky, collapses on mobile) -->
+  <nav class="navbar navbar-expand-lg navbar-uet sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">UET Mardan | Student Activities Portal</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero -->
+  <header id="home" class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="display-5 fw-bold">Welcome to the Student Activities Portal</h1>
+          <p class="lead">One place for every event at UET Mardan — tech fests, competitions, sports and workshops. Browse events, check the schedule, and register online in seconds.</p>
+          <a href="#events" class="btn btn-gold btn-lg mt-2">Explore Events</a>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <img src="images/hero.jpg" class="img-fluid rounded" alt="UET Mardan campus life">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">About the Portal</h2>
+      <p>The UET Mardan Student Activities Portal is the official hub for student life on campus. It brings together all societies, clubs and departments so students never miss a competition, workshop or sports event. Our goal is simple: more participation, less paperwork, and a livelier campus for everyone.</p>
+    </div>
+  </section>
+
+  <!-- 4. Events -->
+  <section id="events" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4">Upcoming Events</h2>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100">
+            <img src="images/tech-fest.jpg" class="card-img-top" alt="Tech Fest">
+            <div class="card-body">
+              <h5 class="card-title">Tech Fest</h5>
+              <p class="card-text">Coding competitions, project exhibitions and guest talks from industry experts.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100">
+            <img src="images/naat-qirat.jpg" class="card-img-top" alt="Naat and Qirat Competition">
+            <div class="card-body">
+              <h5 class="card-title">Naat &amp; Qirat Competition</h5>
+              <p class="card-text">Annual naat and qirat contest celebrating talented voices from all departments.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100">
+            <img src="images/sports-gala.jpg" class="card-img-top" alt="Sports Gala">
+            <div class="card-body">
+              <h5 class="card-title">Sports Gala</h5>
+              <p class="card-text">Cricket, football, badminton and athletics — three days of inter-department rivalry.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100">
+            <img src="images/robotics.jpg" class="card-img-top" alt="Robotics Workshop">
+            <div class="card-body">
+              <h5 class="card-title">Robotics Workshop</h5>
+              <p class="card-text">Hands-on Arduino and robotics sessions for beginners — build your first robot.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Event Schedule -->
+  <section id="schedule" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">Event Schedule</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th>Event Name</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Tech Fest</td><td>15 Oct 2026</td><td>9:00 AM</td><td>Main Auditorium</td></tr>
+            <tr><td>Naat &amp; Qirat Competition</td><td>18 Oct 2026</td><td>2:00 PM</td><td>Central Mosque Hall</td></tr>
+            <tr><td>Sports Gala</td><td>22 Oct 2026</td><td>8:00 AM</td><td>University Ground</td></tr>
+            <tr><td>Robotics Workshop</td><td>25 Oct 2026</td><td>10:00 AM</td><td>CS Department Lab</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Registration Form -->
+  <section id="registration" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4">Event Registration</h2>
+
+      <!-- Success message (hidden until form is submitted) -->
+      <div id="successAlert" class="alert alert-success d-none" role="alert">
+        Registration successful! Thank you for signing up — we will contact you by email soon.
+      </div>
+
+      <form id="regForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="e.g. Jawad Ahmad" required>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="col-md-6">
+          <label for="department" class="form-label">Department</label>
+          <select class="form-select" id="department" required>
+            <option value="" selected>Choose...</option>
+            <option>Computer Science</option>
+            <option>Electrical Engineering</option>
+            <option>Mechanical Engineering</option>
+            <option>Civil Engineering</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="eventSelect" class="form-label">Select Event</label>
+          <select class="form-select" id="eventSelect" required>
+            <option value="" selected>Choose...</option>
+            <option>Tech Fest</option>
+            <option>Naat &amp; Qirat Competition</option>
+            <option>Sports Gala</option>
+            <option>Robotics Workshop</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label class="form-label d-block">Gender</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Anything you want us to know..."></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-gold">Submit Registration</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 7. Footer / Contact -->
+  <footer id="contact" class="footer-uet text-white py-4">
+    <div class="container text-center">
+      <h5 class="fw-bold">UET Mardan | Student Activities Portal</h5>
+      <p class="mb-0">Contact us: <a href="mailto:activities@uetmardan.edu.pk" class="text-white">activities@uetmardan.edu.pk</a></p>
+      <small>&copy; 2026 UET Mardan. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- 8. Full source code (injected by build script) -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">Page Source Code</h2>
+      <p class="text-muted">The complete HTML source of this page is shown below, as required.</p>
+      <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;UET Mardan | Student Activities Portal&lt;/title&gt;
+  &lt;!-- Bootstrap 5.3 CSS --&gt;
+  &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;style&gt;
+    /* UET theme colors */
+    :root {
+      --uet-green: #0a5c36;
+      --uet-gold: #f2b705;
+    }
+    /* Navbar + footer use deep UET green */
+    .navbar-uet, .footer-uet {
+      background-color: var(--uet-green);
+    }
+    .navbar-uet .navbar-brand,
+    .navbar-uet .nav-link {
+      color: #ffffff;
+    }
+    .navbar-uet .nav-link:hover {
+      color: var(--uet-gold);
+    }
+    /* Gold accent button */
+    .btn-gold {
+      background-color: var(--uet-gold);
+      color: #000;
+      font-weight: 600;
+    }
+    .btn-gold:hover {
+      background-color: #d9a404;
+      color: #000;
+    }
+    /* Hero section */
+    .hero {
+      background: linear-gradient(135deg, #0a5c36 0%, #0e7a48 100%);
+      color: #fff;
+    }
+    .hero img {
+      border: 4px solid var(--uet-gold);
+    }
+    /* Section headings with gold underline */
+    .section-title {
+      color: var(--uet-green);
+      border-bottom: 3px solid var(--uet-gold);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    /* Cards get a subtle shadow */
+    .card {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      border: none;
+    }
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+    /* Code block styling */
+    pre.code-block {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 20px;
+      border-radius: 8px;
+      max-height: 600px;
+      overflow: auto;
+      font-size: 0.8rem;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- 1. Navbar (sticky, collapses on mobile) --&gt;
+  &lt;nav class=&quot;navbar navbar-expand-lg navbar-uet sticky-top&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;a class=&quot;navbar-brand fw-bold&quot; href=&quot;#home&quot;&gt;UET Mardan | Student Activities Portal&lt;/a&gt;
+      &lt;button class=&quot;navbar-toggler bg-light&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navMenu&quot;&gt;
+        &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navMenu&quot;&gt;
+        &lt;ul class=&quot;navbar-nav ms-auto&quot;&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#events&quot;&gt;Events&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#schedule&quot;&gt;Schedule&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#registration&quot;&gt;Registration&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;!-- 2. Hero --&gt;
+  &lt;header id=&quot;home&quot; class=&quot;hero py-5&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;row align-items-center&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;h1 class=&quot;display-5 fw-bold&quot;&gt;Welcome to the Student Activities Portal&lt;/h1&gt;
+          &lt;p class=&quot;lead&quot;&gt;One place for every event at UET Mardan — tech fests, competitions, sports and workshops. Browse events, check the schedule, and register online in seconds.&lt;/p&gt;
+          &lt;a href=&quot;#events&quot; class=&quot;btn btn-gold btn-lg mt-2&quot;&gt;Explore Events&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6 mt-4 mt-md-0&quot;&gt;
+          &lt;img src=&quot;images/hero.jpg&quot; class=&quot;img-fluid rounded&quot; alt=&quot;UET Mardan campus life&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;!-- 3. About --&gt;
+  &lt;section id=&quot;about&quot; class=&quot;py-5&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h2 class=&quot;section-title mb-4&quot;&gt;About the Portal&lt;/h2&gt;
+      &lt;p&gt;The UET Mardan Student Activities Portal is the official hub for student life on campus. It brings together all societies, clubs and departments so students never miss a competition, workshop or sports event. Our goal is simple: more participation, less paperwork, and a livelier campus for everyone.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- 4. Events --&gt;
+  &lt;section id=&quot;events&quot; class=&quot;py-5 bg-light&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h2 class=&quot;section-title mb-4&quot;&gt;Upcoming Events&lt;/h2&gt;
+      &lt;div class=&quot;row g-4&quot;&gt;
+        &lt;!-- Card 1 --&gt;
+        &lt;div class=&quot;col-sm-6 col-md-3&quot;&gt;
+          &lt;div class=&quot;card h-100&quot;&gt;
+            &lt;img src=&quot;images/tech-fest.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;Tech Fest&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+              &lt;h5 class=&quot;card-title&quot;&gt;Tech Fest&lt;/h5&gt;
+              &lt;p class=&quot;card-text&quot;&gt;Coding competitions, project exhibitions and guest talks from industry experts.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Card 2 --&gt;
+        &lt;div class=&quot;col-sm-6 col-md-3&quot;&gt;
+          &lt;div class=&quot;card h-100&quot;&gt;
+            &lt;img src=&quot;images/naat-qirat.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;Naat and Qirat Competition&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+              &lt;h5 class=&quot;card-title&quot;&gt;Naat &amp;amp; Qirat Competition&lt;/h5&gt;
+              &lt;p class=&quot;card-text&quot;&gt;Annual naat and qirat contest celebrating talented voices from all departments.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Card 3 --&gt;
+        &lt;div class=&quot;col-sm-6 col-md-3&quot;&gt;
+          &lt;div class=&quot;card h-100&quot;&gt;
+            &lt;img src=&quot;images/sports-gala.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;Sports Gala&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+              &lt;h5 class=&quot;card-title&quot;&gt;Sports Gala&lt;/h5&gt;
+              &lt;p class=&quot;card-text&quot;&gt;Cricket, football, badminton and athletics — three days of inter-department rivalry.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Card 4 --&gt;
+        &lt;div class=&quot;col-sm-6 col-md-3&quot;&gt;
+          &lt;div class=&quot;card h-100&quot;&gt;
+            &lt;img src=&quot;images/robotics.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;Robotics Workshop&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+              &lt;h5 class=&quot;card-title&quot;&gt;Robotics Workshop&lt;/h5&gt;
+              &lt;p class=&quot;card-text&quot;&gt;Hands-on Arduino and robotics sessions for beginners — build your first robot.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- 5. Event Schedule --&gt;
+  &lt;section id=&quot;schedule&quot; class=&quot;py-5&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h2 class=&quot;section-title mb-4&quot;&gt;Event Schedule&lt;/h2&gt;
+      &lt;div class=&quot;table-responsive&quot;&gt;
+        &lt;table class=&quot;table table-striped table-bordered&quot;&gt;
+          &lt;thead class=&quot;table-dark&quot;&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Event Name&lt;/th&gt;
+              &lt;th&gt;Date&lt;/th&gt;
+              &lt;th&gt;Time&lt;/th&gt;
+              &lt;th&gt;Venue&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;&lt;td&gt;Tech Fest&lt;/td&gt;&lt;td&gt;15 Oct 2026&lt;/td&gt;&lt;td&gt;9:00 AM&lt;/td&gt;&lt;td&gt;Main Auditorium&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Naat &amp;amp; Qirat Competition&lt;/td&gt;&lt;td&gt;18 Oct 2026&lt;/td&gt;&lt;td&gt;2:00 PM&lt;/td&gt;&lt;td&gt;Central Mosque Hall&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Sports Gala&lt;/td&gt;&lt;td&gt;22 Oct 2026&lt;/td&gt;&lt;td&gt;8:00 AM&lt;/td&gt;&lt;td&gt;University Ground&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Robotics Workshop&lt;/td&gt;&lt;td&gt;25 Oct 2026&lt;/td&gt;&lt;td&gt;10:00 AM&lt;/td&gt;&lt;td&gt;CS Department Lab&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- 6. Registration Form --&gt;
+  &lt;section id=&quot;registration&quot; class=&quot;py-5 bg-light&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h2 class=&quot;section-title mb-4&quot;&gt;Event Registration&lt;/h2&gt;
+
+      &lt;!-- Success message (hidden until form is submitted) --&gt;
+      &lt;div id=&quot;successAlert&quot; class=&quot;alert alert-success d-none&quot; role=&quot;alert&quot;&gt;
+        Registration successful! Thank you for signing up — we will contact you by email soon.
+      &lt;/div&gt;
+
+      &lt;form id=&quot;regForm&quot; class=&quot;row g-3&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;label for=&quot;fullName&quot; class=&quot;form-label&quot;&gt;Full Name&lt;/label&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;fullName&quot; placeholder=&quot;e.g. Jawad Ahmad&quot; required&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;label for=&quot;email&quot; class=&quot;form-label&quot;&gt;Email&lt;/label&gt;
+          &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot; placeholder=&quot;you@example.com&quot; required&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;label for=&quot;department&quot; class=&quot;form-label&quot;&gt;Department&lt;/label&gt;
+          &lt;select class=&quot;form-select&quot; id=&quot;department&quot; required&gt;
+            &lt;option value=&quot;&quot; selected&gt;Choose...&lt;/option&gt;
+            &lt;option&gt;Computer Science&lt;/option&gt;
+            &lt;option&gt;Electrical Engineering&lt;/option&gt;
+            &lt;option&gt;Mechanical Engineering&lt;/option&gt;
+            &lt;option&gt;Civil Engineering&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;label for=&quot;eventSelect&quot; class=&quot;form-label&quot;&gt;Select Event&lt;/label&gt;
+          &lt;select class=&quot;form-select&quot; id=&quot;eventSelect&quot; required&gt;
+            &lt;option value=&quot;&quot; selected&gt;Choose...&lt;/option&gt;
+            &lt;option&gt;Tech Fest&lt;/option&gt;
+            &lt;option&gt;Naat &amp;amp; Qirat Competition&lt;/option&gt;
+            &lt;option&gt;Sports Gala&lt;/option&gt;
+            &lt;option&gt;Robotics Workshop&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+          &lt;label class=&quot;form-label d-block&quot;&gt;Gender&lt;/label&gt;
+          &lt;div class=&quot;form-check form-check-inline&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;male&quot; value=&quot;Male&quot; required&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;male&quot;&gt;Male&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;form-check form-check-inline&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;female&quot; value=&quot;Female&quot;&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;female&quot;&gt;Female&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+          &lt;label for=&quot;message&quot; class=&quot;form-label&quot;&gt;Message&lt;/label&gt;
+          &lt;textarea class=&quot;form-control&quot; id=&quot;message&quot; rows=&quot;3&quot; placeholder=&quot;Anything you want us to know...&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-12&quot;&gt;
+          &lt;button type=&quot;submit&quot; class=&quot;btn btn-gold&quot;&gt;Submit Registration&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- 7. Footer / Contact --&gt;
+  &lt;footer id=&quot;contact&quot; class=&quot;footer-uet text-white py-4&quot;&gt;
+    &lt;div class=&quot;container text-center&quot;&gt;
+      &lt;h5 class=&quot;fw-bold&quot;&gt;UET Mardan | Student Activities Portal&lt;/h5&gt;
+      &lt;p class=&quot;mb-0&quot;&gt;Contact us: &lt;a href=&quot;mailto:activities@uetmardan.edu.pk&quot; class=&quot;text-white&quot;&gt;activities@uetmardan.edu.pk&lt;/a&gt;&lt;/p&gt;
+      &lt;small&gt;&amp;copy; 2026 UET Mardan. All rights reserved.&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- 8. Full source code (injected by build script) --&gt;
+  &lt;section class=&quot;py-5&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h2 class=&quot;section-title mb-4&quot;&gt;Page Source Code&lt;/h2&gt;
+      &lt;p class=&quot;text-muted&quot;&gt;The complete HTML source of this page is shown below, as required.&lt;/p&gt;
+      &lt;pre class=&quot;code-block&quot;&gt;&lt;code&gt;&lt;!-- full code shown here --&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Bootstrap 5.3 JS bundle --&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // Demo only: show a success message instead of sending data anywhere
+    document.getElementById(&#x27;regForm&#x27;).addEventListener(&#x27;submit&#x27;, function (e) {
+      e.preventDefault(); // stop the page from reloading
+      document.getElementById(&#x27;successAlert&#x27;).classList.remove(&#x27;d-none&#x27;);
+      this.reset(); // clear the form
+      // scroll the alert into view
+      document.getElementById(&#x27;successAlert&#x27;).scrollIntoView({ behavior: &#x27;smooth&#x27;, block: &#x27;center&#x27; });
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+  </section>
+
+  <!-- Bootstrap 5.3 JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Demo only: show a success message instead of sending data anywhere
+    document.getElementById('regForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // stop the page from reloading
+      document.getElementById('successAlert').classList.remove('d-none');
+      this.reset(); // clear the form
+      // scroll the alert into view
+      document.getElementById('successAlert').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>
